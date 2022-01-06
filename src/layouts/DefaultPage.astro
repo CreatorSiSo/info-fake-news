@@ -1,0 +1,51 @@
+---
+const {title} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot/>
+  </body>
+</html>
+
+<style global>
+html {
+  --white: hsl(0, 0%, 90%);
+  --gray: hsl(0, 0%, 30%);
+  --dark-gray: hsl(0, 0%, 16%);
+  --dark-grey: hsl(208, 10%, 16%);
+}
+
+body {
+  color: var(--white);
+  background-color: var(--dark-gray);
+}
+
+footer {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  text-align: center;
+
+  background-color: var(--gray);
+}
+
+button {
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  padding-left: 1.6rem;
+  padding-right: 1.6rem;
+
+  border: 2px solid hsl(0, 0%, 26%);
+  border-radius: 1.6rem;
+
+  color: var(--white);
+  background-color: hsl(0, 0%, 22%);
+}
+</style>
