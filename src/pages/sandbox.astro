@@ -1,0 +1,77 @@
+---
+import DefaultPage from '../layouts/DefaultPage.astro';
+
+import Button from '../components/Button.astro';
+import Footer from '../components/Footer.astro';
+import Section from '../components/Section.astro';
+import PageBanner from '../components/PageBanner.astro';
+
+const title = 'Sandbox'
+const colors = {
+  'clr-primary': '#ff0000',
+  'clr-secondary': '#00ff00',
+  'clr-third': '#0000ff'
+}
+---
+
+<DefaultPage title={title} colors={colors}>
+  <header>Header</header>
+  <main>
+    <PageBanner>{title}</PageBanner>
+    <Button>Default Button</Button>
+    <br>
+    <br>
+    <Button type='submit'>Submit Button</Button>
+    <br>
+    <br>
+    <Section>
+      <h1>Heading</h1>
+      <p>
+        Lorem ipsum, adipisicing elit. Rerum sunt cumque impedit accusamus
+        voluptatum hic quo consequuntur eveniet quas, soluta nam temporibus
+        officia similique illum libero perspiciatis facere iure suscipit fugiat
+        ullam quia officiis non, voluptate odio. In quis corporis commodi, hic
+        magni officia minima perspiciatis voluptas ipsa voluptatibus facilis
+        consequuntur nulla nam? Sapiente reprehenderit adipisci impedit alias
+        velit possimus aut quos, veniam maxime dolor officia numquam nisi, odit
+        vitae incidunt. Est suscipit optio, reiciendis molestias error rerum et
+        unde libero iusto accusamus illo qui blanditiis, sunt perspiciatis
+        repudiandae tempora perferendis itaque doloribus quis natus
+        exercitationem. Quam distinctio fugiat blanditiis.
+      </p>
+    </Section>
+    <Section>
+      <h1>Heading</h1>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum sunt
+        cumque impedit accusamus voluptatum hic quo consequuntur eveniet quas,
+        soluta temporibus officia similique illum libero perspiciatis facere
+        iure suscipit fugiat ullam quia officiis non, voluptate odio. In quis
+        corporis commodi, hic magni officia minima perspiciatis voluptas ipsa
+        voluptatibus facilis consequuntur nulla nam? Sapiente reprehenderit
+        adipisci impedit alias velit possimus aut quos, veniam maxime dolor
+        officia numquam nisi, odit vitae incidunt. Est suscipit optio, reiciendis
+        molestias error rerum et unde libero iusto accusamus illo qui blanditiis,
+        sunt perspiciatis repudiandae tempora perferendis itaque doloribus quis
+        natus exercitationem. Quam distinctio fugiat blanditiis.
+      </p>
+    </Section>
+    <Section>
+      <h1>Heading</h1>
+      <p>
+        Rerum sunt cumque impedit accusamus voluptatum hic quo consequuntur
+        eveniet quas, soluta nam temporibus officia similique illum libero
+        perspiciatis facere iure suscipit fugiat ullam quia officiis non,
+        voluptate odio. In quis corporis commodi, hic magni officia minima
+        perspiciatis voluptas ipsa voluptatibus facilis consequuntur nulla nam?
+        Sapiente reprehenderit adipisci impedit alias velit possimus aut quos,
+        veniam maxime dolor officia numquam nisi, odit vitae incidunt. Est
+        suscipit optio, reiciendis molestias error rerum et unde libero iusto
+        accusamus illo qui blanditiis, sunt perspiciatis repudiandae tempora
+        perferendis itaque doloribus quis natus exercitationem. Quam distinctio
+        fugiat blanditiis.
+      </p>
+    </Section>
+  </main>
+  <Footer></Footer>
+</DefaultPage>

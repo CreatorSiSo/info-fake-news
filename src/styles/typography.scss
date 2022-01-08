@@ -1,0 +1,45 @@
+body {
+  font-size: 18px;
+  font-family: var(--font-family-poppins);
+  line-height: 1.75;
+
+  color: var(--clr-black);
+  background-color: var(--clr-white);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0.4em 0;
+
+  font-family: var(--font-family-raleway);
+  font-weight: 900;
+  line-height: 1;
+}
+
+h1 {
+  font-size: 68px;
+}
+
+h2 {
+  font-size: 54px;
+}
+
+h3 {
+  font-size: 44px;
+}
+
+h4 {
+  font-size: 34px;
+}
+
+h5 {
+  font-size: 28px;
+}
+
+h6 {
+  font-size: 22px;
+}

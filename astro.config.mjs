@@ -4,7 +4,8 @@ export default {
   dist: "./build",
   public: "./public",
   buildOptions: {
-    // site: 'http://example.com', // Your public domain, e.g.: https://my-site.dev/. Used to generate sitemaps and canonical URLs.
+    // Your public domain used to generate sitemaps and canonical URLs.
+    site: "https://creatorsiso.github.io/info-fake-news",
     sitemap: true,
   },
   devOptions: {

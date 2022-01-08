@@ -1,0 +1,13 @@
+@use "variables";
+@use "typography";
+
+body {
+  margin: 0;
+}
+
+header {
+  padding: 2rem 0;
+  text-align: center;
+
+  background-color: var(--primary);
+}
