@@ -1,9 +1,8 @@
 # build output
-dist
+build
 
 # dependencies
-node_modules/
-.snowpack/
+node_modules
 
 # logs
 npm-debug.log*
