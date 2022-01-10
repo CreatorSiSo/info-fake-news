@@ -1,7 +1,8 @@
 @use 'variables';
 @use 'typography';
 
-body {
+body,
+p {
   margin: 0;
 }
 
@@ -10,4 +11,10 @@ header {
   text-align: center;
 
   background-color: var(--primary);
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
 }

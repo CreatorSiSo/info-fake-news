@@ -1,5 +1,17 @@
 ---
-const { title, colors } = Astro.props;
+export interface Props {
+  title: string;
+  colors?: {};
+}
+
+const {
+  title,
+  colors = {
+    'clr-primary': '#ff0000',
+    'clr-secondary': '#ff00cc',
+    'clr-tertiary': '#dddd00',
+  },
+} = Astro.props;
 ---
 
 <html lang="en">

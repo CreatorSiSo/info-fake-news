@@ -1,0 +1,70 @@
+---
+import DefaultPage from '../layouts/DefaultPage.astro';
+
+import Section from '../components/Section.astro';
+import SectionGroup from '../components/SectionGroup.astro';
+import MessageBox from '../components/MessageBox.astro';
+import PageBanner from '../components/PageBanner.astro';
+import PageBody from '../components/PageBody.astro';
+
+const title = 'Youtube';
+const  colors = {
+  'clr-primary': '#ff2525',
+  'clr-secondary': '#b31ace',
+  'clr-tertiary': '#e5b72d',
+}
+---
+
+<DefaultPage title={title} colors={colors}>
+  <PageBanner title={title}/>
+  <PageBody>
+    <SectionGroup width="content">
+      <h2 class="Heading">Tipps zum Videos Factchecken</h2>
+      <Section alignImg="right">
+        <p slot="default">
+          <strong>Punkt eins wären hier eigentlich die Dislikes gewesen...</strong>
+          Die hat Youtube aber im Dezember 2021 für Zuschauer unsichtbar gemacht.
+          Wie man diese wieder sichtbar machen kann zeige ich <a href="#0">hier.</a>
+        </p>
+        <MessageBox level="info" slot="default">
+          Hat ein Video also annähernd so viele Dislikes wie Likes sollte man auf jeden Fall weiter recherchieren!
+        </MessageBox>
+        <img src="/yt-dislikes.png" height="500" width="960" slot="img">
+      </Section>
+      <Section>
+        Ist der Creator des Videos verifiziert?
+        Authentic:
+        Your channel must represent the real creator, brand, or entity you're
+        claiming to be. We'll look at a variety of factors to help verify your
+        identity, and may also ask for additional info or documentation.
+        Complete:
+        Your channel must be public and have a description, channel
+        icon, and content, and be active on YouTube.
+        Achtung: Nur Kanäle mit über 100.000 Abonnenten können sich verifizieren lassen. Quelle:
+        https://support.google.com/youtube/thread/14793658/%F0%9F%9A%A9-coming-soon-new-design-and-criteria-for-channel-verification-on-youtube?hl=en
+        1. Wenn ja heißt das einfach nur das das Video von einer echten
+        Person/Organisation kommt und nicht ob man einem Kanal vertrauen sollte
+        oder nicht.
+      </Section>
+    </SectionGroup>
+    <SectionGroup width="content">
+      <h2 class="Heading">Der Youtube Dislike Button</h2>
+      <Section>
+        <Fragment id="test">
+          <h3>Return YouTube Dislike</h3>
+          <ul>
+            <li>Website: https://returnyoutubedislike.com</li>
+            <li>GitHub: https://github.com/Anarios/return-youtube-dislike</li>
+          </ul>
+        </Fragment>
+      </Section>
+      <Section>
+        <h3>Youtube Vanced</h3>
+        <ul>
+          <li>Website: https://vancedapp.com</li>
+          <li>GitHub: https://github.com/YTVanced</li>
+        </ul>
+      </Section>
+    </SectionGroup>
+  </PageBody>
+</DefaultPage>
