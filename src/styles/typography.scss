@@ -3,8 +3,8 @@ body {
   font-family: var(--font-family-poppins);
   line-height: 1.75;
 
-  color: var(--clr-black);
-  background-color: var(--clr-white);
+  color: hsl(var(--hsl-white));
+  background-color: hsl(var(--hsl-gray-200));
 }
 
 h1,
@@ -42,4 +42,8 @@ h5 {
 
 h6 {
   font-size: 22px;
+}
+
+strong {
+  color: hsl(var(--hsl-white));
 }

@@ -1,19 +1,26 @@
 html {
-  // --dark-grey: hsl(208, 10%, 16%);
+  background-color: #00000000;
+  // --dark-grey: 208, 10%, 16%;
 
-  --clr-white: hsl(0, 0%, 95%);
-  --clr-gray-900: hsl(0, 0%, 66%);
-  --clr-gray-800: hsl(0, 0%, 54%);
-  --clr-gray-700: hsl(0, 0%, 43%);
-  --clr-gray-600: hsl(0, 0%, 34%);
-  --clr-gray-500: hsl(0, 0%, 26%);
-  --clr-gray-400: hsl(0, 0%, 20%);
-  --clr-gray-300: hsl(0, 0%, 15%);
-  --clr-gray-200: hsl(0, 0%, 11%);
-  --clr-gray-100: hsl(0, 0%, 8%);
-  --clr-black: hsl(0, 0%, 5%);
+  --hsl-white: 0, 0%, 95%;
+  --hsl-gray-900: 0, 0%, 66%;
+  --hsl-gray-800: 0, 0%, 54%;
+  --hsl-gray-700: 0, 0%, 43%;
+  --hsl-gray-600: 0, 0%, 34%;
+  --hsl-gray-500: 0, 0%, 26%;
+  --hsl-gray-400: 0, 0%, 20%;
+  --hsl-gray-300: 0, 0%, 15%;
+  --hsl-gray-200: 0, 0%, 11%;
+  --hsl-gray-100: 0, 0%, 8%;
+  --hsl-black: 0, 0%, 5%;
+
+  --hsl-info: 210, 90%, 50%;
+  --hsl-warn: 50, 90%, 50%;
+  --hsl-error: 4, 90%, 50%;
 
   --font-family-raleway: Raleway, sans-serif;
   --font-family-poppins: Poppins, 'Segoe UI', Tahoma, Geneva, Verdana,
     sans-serif;
+
+  --border-radius: 12px;
 }
