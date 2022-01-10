@@ -1,18 +1,50 @@
-<section>
-  <div class="content">
+---
+export interface Props {
+  alignImg?: 'left' | 'right' | 'above' | 'below',
+}
+
+const { alignImg = 'right' } = Astro.props;
+---
+
+<section class="Section" data-align-img={alignImg}>
+  <span class="TextContainer">
     <slot></slot>
-  </div>
+  </span>
+  <span class="ImageContainer">
+    <slot name="img"></slot>
+  </span>
 </section>
 
-<style lang="scss">
-  section {
-    display: flex;
-    padding: 0 2rem;
-    text-align: justify;
+<style lang="scss" global>
+  .Section {
+    display: grid;
+    background-color: hsla(0, 0%, 100%, 3%);
+    border: 2px solid hsla(0, 0%, 100%, 4%);
+    border-radius: var(--border-radius);
 
-    .content {
-      max-width: 1200px;
-      margin: 0 auto;
+
+    .TextContainer {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      margin-top: auto;
+      margin-bottom: auto;
+      padding: 2rem 3rem;
+      text-align: justify;
+    }
+
+    &[data-align-img='left'] {
+      flex-direction: row-reverse;
+    }
+    &[data-align-img='right'] {
+      flex-direction: row;
+    }
+    &[data-align-img='above'] {
+      flex-direction: column-reverse;
+    }
+    &[data-align-img='below'] {
+      flex-direction: column;
     }
   }
 </style>
