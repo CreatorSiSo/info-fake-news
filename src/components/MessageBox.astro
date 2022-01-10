@@ -1,0 +1,53 @@
+---
+const { level = 'info' } = Astro.props;
+const hsl = `var(--hsl-${level})`;
+---
+
+<div class="MessageBox">
+  <span class="Aside">
+    <i class="fa-solid fa-triangle-exclamation fa-lg"></i>
+  </span>
+  <span class="Body">
+    <strong class="Title">
+      <slot name="title" />
+    </strong>
+    <span class="Message">
+      <slot name="default"/>
+    </span>
+  </span>
+</div>
+
+<style lang="scss" define:vars={{ hsl }}>
+  .MessageBox {
+    display: flex;
+    border: 2px solid hsla(var(--hsl), 20%);
+    border-radius: var(--border-radius);
+    background-color: hsla(var(--hsl), 15%);
+    overflow: hidden;
+
+    .Aside {
+      padding: 1.5rem 1rem;
+      background-color: hsla(var(--hsl), 20%);
+
+      .svg-inline--fa {
+        color: hsl(var(--hsl));
+        width: 1.25em;
+      }
+    }
+
+    .Body {
+      padding: 1.5rem;
+
+      .Title {
+        color: hsl(var(--hsl-black));
+        font-weight: 600;
+        line-height: 1.25;
+      }
+
+      .Message {
+        margin: 0 auto;
+        padding-top: 0.25rem;
+      }
+    }
+  }
+</style>
