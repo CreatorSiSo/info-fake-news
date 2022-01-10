@@ -1,0 +1,39 @@
+---
+const { title } = Astro.props;
+---
+
+<section>
+  <h1>{title}</h1>
+  <div></div>
+</section>
+
+<style lang="scss">
+  section {
+    position: relative;
+    display: flex;
+    place-content: center;
+    overflow: hidden;
+
+    div {
+      transform-origin: center top;
+      background-color: hsl(var(--hsl-black));
+      background-image: url(/yt-screenshot.png);
+      background-position: center top;
+      background-repeat: repeat;
+      filter: blur(1rem) brightness(40%);
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+    }
+
+    h1 {
+      margin: 2em 0;
+      background: linear-gradient(
+        to bottom right,
+        var(--clr-primary),
+        var(--clr-secondary)
+      ) text;
+      filter: drop-shadow(hsl(var(--hsl-black)) 0 0.5rem 1rem);
+    }
+  }
+</style>
