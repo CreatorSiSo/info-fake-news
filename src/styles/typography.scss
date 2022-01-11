@@ -64,6 +64,15 @@ strong {
   color: hsl(var(--hsl-white));
 }
 
+mark {
+  border-radius: 0.2rem;
+  background: linear-gradient(
+    to bottom right,
+    var(--clr-primary),
+    var(--clr-secondary)
+  );
+}
+
 a {
   font-weight: 600;
   color: transparent;

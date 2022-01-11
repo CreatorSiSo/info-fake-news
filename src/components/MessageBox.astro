@@ -12,7 +12,7 @@ const hsl = `var(--hsl-${level})`;
       <slot name="title" />
     </strong>
     <span class="Message">
-      <slot name="default"/>
+      <slot name="default" />
     </span>
   </span>
 </div>
@@ -37,9 +37,9 @@ const hsl = `var(--hsl-${level})`;
 
     .Body {
       padding: 1.5rem;
+      text-align: left;
 
       .Title {
-        color: hsl(var(--hsl-black));
         font-weight: 600;
         line-height: 1.25;
       }

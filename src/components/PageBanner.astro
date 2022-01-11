@@ -3,7 +3,7 @@ const { title } = Astro.props;
 ---
 
 <section>
-  <h1>{title}</h1>
+  <h1><slot></slot></h1>
   <div></div>
 </section>
 
@@ -13,6 +13,7 @@ const { title } = Astro.props;
     display: flex;
     place-content: center;
     overflow: hidden;
+    text-align: center;
 
     div {
       transform-origin: center top;
@@ -27,12 +28,15 @@ const { title } = Astro.props;
     }
 
     h1 {
-      margin: 2em 0;
+      padding: 2em 0;
+      font-size: 4.6rem;
+      line-height: 1.2;
       background: linear-gradient(
-        to bottom right,
-        var(--clr-primary),
-        var(--clr-secondary)
-      ) text;
+          to bottom right,
+          var(--clr-primary),
+          var(--clr-secondary)
+        )
+        text;
       filter: drop-shadow(hsl(var(--hsl-black)) 0 0.5rem 1rem);
     }
   }

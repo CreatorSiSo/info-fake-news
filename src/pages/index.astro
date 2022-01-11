@@ -1,5 +1,68 @@
 ---
 import DefaultPage from '../layouts/DefaultPage.astro';
+
+import Section from '../components/Section.astro';
+import SectionGroup from '../components/SectionGroup.astro';
+import MessageBox from '../components/MessageBox.astro';
+import PageBanner from '../components/PageBanner.astro';
+import PageBody from '../components/PageBody.astro';
+
+const title = 'Fake News';
+const colors = {
+  'clr-primary': '#52c4f9',
+  'clr-secondary': '#2a5bfc',
+  'clr-tertiary': '#80ff26',
+};
 ---
 
-<DefaultPage title="Homepage" />
+<DefaultPage {title} {colors}>
+  <PageBanner>
+    {title}<br />
+    Wem glaubst du?
+  </PageBanner>
+  <PageBody>
+    <SectionGroup width="content">
+      <Section>
+        <p slot="default">
+          Du hast gerade eben eine von einem Freund eine Nachricht darüber
+          bekommen das Olaf Scholz eigentlich gar keine Glatze hat, sondern sich
+          diese <strong>extra rasiert.</strong>
+        </p>
+        <MessageBox level="info" slot="default">
+          Bevor du das auch noch an deine Freundin weiterleitest, sollest du dir
+          erst einmal die Frage stellen ob denn bei dieser Nachricht auch alles
+          stimmt.
+        </MessageBox>
+      </Section>
+      <Section>
+        <p>
+          Diese Art von 'politischem' Informationsaustausch ist vor allem bei
+          jüngeren Generationen die Norm.
+        </p>
+        <p>
+          Trotzdem informieren sich laut einer Vodafon Stiftung Studie aus dem
+          Jahr 2019 fast 75% der 14 bis 24 Jährigen mindestens Wöchentlich über
+          die aktuelle Politik. Die übrigbleibenden 25%, welche hauptsächlich
+          aus Personen mit wenig Interesse für Politik und niedrigem
+          Bildungshintergrund bestehen, fühlen sich oft mit der Überprüfung
+          dieser Fakten unsicher.<br />
+        </p>
+        <p>
+          Wenn man also nicht aufpasst verbreitet man am Ende selbst
+          Falschinformationen, genannt <mark>Fake News.</mark>
+        </p>
+      </Section>
+    </SectionGroup>
+    <SectionGroup width="content">
+      <h2 class="Heading">Wie kann man Fake News herausfiltern?</h2>
+      <Section>
+        <span>
+          <a href="/youtube">Tips für Youtube</a>
+        </span>
+        <span>
+          <a href="/messenger">Tips für Messegers und Chats</a>
+        </span>
+      </Section>
+    </SectionGroup>
+  </PageBody>
+</DefaultPage>

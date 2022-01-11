@@ -1,6 +1,6 @@
 ---
 export interface Props {
-  alignImg?: 'left' | 'right' | 'above' | 'below',
+  alignImg?: 'left' | 'right' | 'above' | 'below';
 }
 
 const { alignImg = 'right' } = Astro.props;
@@ -8,10 +8,10 @@ const { alignImg = 'right' } = Astro.props;
 
 <section class="Section" data-align-img={alignImg}>
   <span class="TextContainer">
-    <slot></slot>
+    <slot />
   </span>
   <span class="ImageContainer">
-    <slot name="img"></slot>
+    <slot name="img" />
   </span>
 </section>
 
@@ -22,7 +22,6 @@ const { alignImg = 'right' } = Astro.props;
     border: 2px solid hsla(0, 0%, 100%, 4%);
     border-radius: var(--border-radius);
 
-
     .TextContainer {
       display: flex;
       flex-direction: column;
@@ -31,7 +30,6 @@ const { alignImg = 'right' } = Astro.props;
       margin-top: auto;
       margin-bottom: auto;
       padding: 2rem 3rem;
-      text-align: justify;
     }
 
     &[data-align-img='left'] {
