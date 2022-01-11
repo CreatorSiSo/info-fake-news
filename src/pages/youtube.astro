@@ -6,6 +6,7 @@ import SectionGroup from '../components/SectionGroup.astro';
 import MessageBox from '../components/MessageBox.astro';
 import PageBanner from '../components/PageBanner.astro';
 import PageBody from '../components/PageBody.astro';
+import Footer from '../components/Footer.astro';
 
 const title = 'Youtube';
 const colors = {
@@ -41,12 +42,14 @@ const colors = {
         <MessageBox>
           Eine Verifizierung bedeutet nur das das Video von einer echten
           Person/Organisation erstellt wurde, welche einen aktiven Kanal mit
-          über 100.000 Abonnenten betreibt. <strong
+          über 100.000 Abonnenten betreibt.
+          <strong
             >Dadurch weiß man nicht ob man einem Kanal vertrauen sollte oder
             nicht.</strong
           >
           <a
             href="https://support.google.com/youtube/thread/14793658/%F0%9F%9A%A9-coming-soon-new-design-and-criteria-for-channel-verification-on-youtube?hl=en"
+            target="_blank"
           >
             Quelle
           </a>
@@ -103,4 +106,5 @@ const colors = {
       </Section>
     </SectionGroup>
   </PageBody>
+  <Footer />
 </DefaultPage>

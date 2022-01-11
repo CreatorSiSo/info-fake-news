@@ -1,0 +1,24 @@
+---
+import DefaultPage from '../layouts/DefaultPage.astro';
+
+import Section from '../components/Section.astro';
+import SectionGroup from '../components/SectionGroup.astro';
+import MessageBox from '../components/MessageBox.astro';
+import PageBanner from '../components/PageBanner.astro';
+import PageBody from '../components/PageBody.astro';
+
+const title = '404';
+const colors = {
+  'clr-primary': '#ff0000',
+  'clr-secondary': '#ff1100',
+  'clr-tertiary': '#ff2211',
+};
+---
+
+<DefaultPage {title} {colors}>
+  <PageBanner>
+    {title}<br />
+    No Page found!
+  </PageBanner>
+  <PageBody />
+</DefaultPage>
