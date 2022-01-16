@@ -69,7 +69,7 @@ mark {
   background: linear-gradient(
     to bottom right,
     var(--clr-primary),
-    var(--clr-secondary)
+    var(--clr-tertiary)
   );
 }
 
@@ -79,7 +79,7 @@ a {
   background: linear-gradient(
     to bottom right,
     var(--clr-primary),
-    var(--clr-secondary)
+    var(--clr-tertiary)
   );
   text-decoration-color: var(--clr-secondary);
   background-clip: text;
