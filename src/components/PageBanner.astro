@@ -2,14 +2,13 @@
 const { title } = Astro.props;
 ---
 
-<section>
+<section class="h-screen">
   <h1><slot></slot></h1>
   <div></div>
 </section>
 
 <style lang="scss">
   section {
-    height: 100vh;
     position: relative;
     display: flex;
     place-content: center;

@@ -3,7 +3,7 @@ const { level = 'info' } = Astro.props;
 const hsl = `var(--hsl-${level})`;
 ---
 
-<div class="MessageBox">
+<!-- <div class="MessageBox">
   <span class="Aside">
     <i class="fa-solid fa-triangle-exclamation fa-lg"></i>
   </span>
@@ -15,6 +15,18 @@ const hsl = `var(--hsl-${level})`;
       <slot name="default" />
     </span>
   </span>
+</div> -->
+
+<div
+  class="p-6 mx-auto rounded-xl bg-neutral-800 shadow-lg flex items-center space-x-4"
+>
+  <div class="shrink-0 text-neutral-400">
+    <img class="h-12 w-12 fa-solid fa-triangle-exclamation" alt="" />
+  </div>
+  <div>
+    <div class="text-xl font-medium"><slot name="title" /></div>
+    <p class=""><slot name="default" /></p>
+  </div>
 </div>
 
 <style lang="scss" define:vars={{ hsl }}>

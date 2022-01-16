@@ -1,0 +1,72 @@
+---
+import DefaultPage from '../layouts/DefaultPage.astro';
+
+import Section from '../components/Section.astro';
+import SectionGroup from '../components/SectionGroup.astro';
+import PageBanner from '../components/PageBanner.astro';
+import PageBody from '../components/PageBody.astro';
+import NavBar from '../components/NavBar.astro';
+import Footer from '../components/Footer.astro';
+
+const title = 'Quellen';
+const colors = {
+  'clr-primary': '#3247ff',
+  'clr-secondary': '#00ffe9',
+  'clr-tertiary': '#00ff8c',
+};
+---
+
+<DefaultPage {title} {colors}>
+  <PageBanner>
+    {title}
+  </PageBanner>
+  <NavBar />
+  <PageBody>
+    <SectionGroup width="content">
+      <Section>
+        <div class="flex flex-col space-y-4">
+          <a href="https://www.vodafone-stiftung.de/alles-auf-dem-schirm">
+            https://www.vodafone-stiftung.de/alles-auf-dem-schirm
+          </a>
+          <a href="https://padlet.com/b3ashkpq5b/g0aycwuom1mx0r34">
+            https://padlet.com/b3ashkpq5b/g0aycwuom1mx0r34
+          </a>
+          <a
+            href="https://www.lmz-bw.de/medien-und-bildung/jugendmedienschutz/fake-news/wie-kann-man-fake-news-erkennen"
+          >
+            https://www.lmz-bw.de/medien-und-bildung/jugendmedienschutz/fake-news/wie-kann-man-fake-news-erkennen
+          </a>
+          <a
+            href="https://www.planet-wissen.de/kultur/medien/fake_news/fake-news-erkennen-102.html"
+          >
+            https://www.planet-wissen.de/kultur/medien/fake_news/fake-news-erkennen-102.html
+          </a>
+          <a href="https://www.dpa.com/de/unternehmen/faktencheck">
+            https://www.dpa.com/de/unternehmen/faktencheck
+          </a>
+          <a
+            href="https://www.ionos.com/digitalguide/online-marketing/social-media/what-is-fake-news"
+          >
+            https://www.ionos.com/digitalguide/online-marketing/social-media/what-is-fake-news
+          </a>
+          <a
+            href="https://support.google.com/youtube/thread/14793658/%F0%9F%9A%A9-coming-soon-new-design-and-criteria-for-channel-verification-on-youtube"
+          >
+            https://support.google.com/youtube/thread/14793658/%F0%9F%9A%A9-coming-soon-new-design-and-criteria-for-channel-verification-on-youtube
+          </a>
+          <a href="https://youtu.be/FTPYq7VNQf8?t=88">
+            https://youtu.be/FTPYq7VNQf8?t=88
+          </a>
+          Bild von Dirk Vorderstraße:
+          <a href="https://live.staticflickr.com/65535/50222617281_74f98cf5e6_b.jpg">https://live.staticflickr.com/65535/50222617281_74f98cf5e6_b.jpg</a>
+          <a
+            href="https://www.bmj.de/DE/Verbraucherportal/DigitalesTelekommunikation/Impressumspflicht/Impressumspflicht_node.html"
+          >
+            https://www.bmj.de/DE/Verbraucherportal/DigitalesTelekommunikation/Impressumspflicht/Impressumspflicht_node.html
+          </a>
+        </div>
+      </Section>
+    </SectionGroup>
+  </PageBody>
+  <Footer />
+</DefaultPage>

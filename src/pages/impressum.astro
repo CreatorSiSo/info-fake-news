@@ -1,0 +1,35 @@
+---
+import DefaultPage from '../layouts/DefaultPage.astro';
+
+import Section from '../components/Section.astro';
+import SectionGroup from '../components/SectionGroup.astro';
+import PageBanner from '../components/PageBanner.astro';
+import PageBody from '../components/PageBody.astro';
+import NavBar from '../components/NavBar.astro';
+import Footer from '../components/Footer.astro';
+
+const title = 'Impressum';
+const colors = {
+  'clr-primary': '#3247ff',
+  'clr-secondary': '#00ffe9',
+  'clr-tertiary': '#00ff8c',
+};
+---
+
+<DefaultPage {title} {colors}>
+  <PageBanner>
+    {title}<br />
+  </PageBanner>
+  <NavBar />
+  <PageBody>
+    <SectionGroup width="content">
+      <Section class="text-justify">
+        <div>
+          Dies ist eine ausschließlich privat genutzte Webseite, sie dient
+          keinem unternehmerischen Zweck und benötigt somit kein Impressum.
+        </div>
+      </Section>
+    </SectionGroup>
+  </PageBody>
+  <Footer />
+</DefaultPage>

@@ -4,7 +4,6 @@ body {
   line-height: 1.5;
 
   color: hsl(var(--hsl-white));
-  background-color: hsl(var(--hsl-gray-200));
 }
 
 h1,
@@ -65,6 +64,7 @@ strong {
 }
 
 mark {
+  font-weight: 600;
   border-radius: 0.2rem;
   background: linear-gradient(
     to bottom right,

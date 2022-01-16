@@ -14,7 +14,7 @@ const {
 } = Astro.props;
 ---
 
-<html lang="en">
+<html lang="en" class="bg-neutral-950">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -31,12 +31,19 @@ const {
       src="https://kit.fontawesome.com/f93a72721f.js"
       crossorigin="anonymous"></script>
 
+    <link rel="stylesheet" href={Astro.resolve('../styles/tailwind.css')} />
     <link rel="stylesheet" href={Astro.resolve('../styles/style.scss')} />
   </head>
   <body>
     <slot />
   </body>
 </html>
+
+<script hoist>
+  function refreshImage(imgElement) {
+    imgElement.src += '?' + Math.random;
+  }
+</script>
 
 <style define:vars={colors}>
 

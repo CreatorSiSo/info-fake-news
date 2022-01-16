@@ -6,6 +6,7 @@ import SectionGroup from '../components/SectionGroup.astro';
 import MessageBox from '../components/MessageBox.astro';
 import PageBanner from '../components/PageBanner.astro';
 import PageBody from '../components/PageBody.astro';
+import NavBar from '../components/NavBar.astro';
 import Footer from '../components/Footer.astro';
 
 const title = 'Youtube';
@@ -18,91 +19,110 @@ const colors = {
 
 <DefaultPage {title} {colors}>
   <PageBanner>{title}</PageBanner>
+  <NavBar />
   <PageBody>
     <SectionGroup width="content">
       <h2 class="Heading">Tipps zum Videos Factchecken</h2>
-      <h3 class="Heading">0. Dislikes</h3>
-      <Section alignImg="right">
-        <p slot="default">
-          <strong>
-            Punkt eins wären hier eigentlich die Dislikes gewesen...
-          </strong>
-          Die hat Youtube aber im Dezember 2021 für Zuschauer unsichtbar gemacht.
-          Wie man diese wieder sichtbar machen kann zeige ich
-          <a href="#0">hier.</a>
+      <Section>
+        <div class="md:flex">
+          <p class="my-auto">
+            Punkt eins wären hier eigentlich die Dislikes gewesen...<br
+              class="mb-2"
+            />
+            Die hat Youtube aber am 08. Dezember 2021 für Zuschauer in allen Apps
+            und auf allen Webseiten deaktiviert. <span class="text-xl">😥</span>
+          </p>
+          <img src="/yt-dislikes.png" alt="" class="md:shrink-0 md:w-1/3" />
+        </div>
+        <p>
+          Um diese weiterhin sehen zu können wurde das
+          <mark>Return YouTube Dislike</mark>
+          Projekt ins Leben gerufen, welches die Dislikes aus archivierte Daten und
+          neueren durch ihre Addons aufgenommenen Daten zusammensetzt. Diese werden
+          dann auf der YT Webseite angezeigt.
         </p>
-        <MessageBox level="info" slot="default">
-          Hat ein Video also annähernd so viele Dislikes wie Likes sollte man
-          auf jeden Fall weiter recherchieren!
+        <p class="text-right">
+          Mehr Infos unter:<br />
+          <a href="https://returnyoutubedislike.com">
+            https://returnyoutubedislike.com
+          </a><br class="mb-2" />
+          Ausserdem ist der Source Code ist vollständig einsehbar:<br />
+          <a href="https://github.com/Anarios/return-youtube-dislike">
+            https://github.com/Anarios/return-youtube-dislike
+          </a>
+        </p>
+        <MessageBox level="info">
+          <span slot="title">Zu merken ist hier:</span>
+          Hat ein Video also annähernd so viele Dislikes wie Likes, dann sollte man
+          auf jeden Fall weiter recherchieren.
         </MessageBox>
-        <img src="/yt-dislikes.png" height="500" width="960" slot="img" />
       </Section>
       <Section>
-        <strong>Ist der Creator des Videos verifiziert?</strong>
+        <h4>Deepfakes</h4>
+        <div class="flex flex-col md:flex-row">
+          <p class="space-y-4 md:mr-6 md:my-auto">
+            Viele Künstliche Intelligenzen sind mittlerweile weit genug
+            entwickelt, um glaubhafte Bilder von nicht existierenden Menschen zu
+            generieren.
+            <span class="block mt-6 mb-6 text-center md:text-right">
+              Ein Beispiel dafür wäre:<br />
+              <a href="https://thispersondoesnotexist.com">
+                https://thispersondoesnotexist.com
+              </a>
+            </span>
+          </p>
+          <div class="relative md:m-0 md:shrink-0 md:w-1/3">
+            <img
+              src="https://thispersondoesnotexist.com/image"
+              class="rounded-xl cursor-pointer"
+              onclick="refreshImage(event.target)"
+            />
+            <span
+              class="absolute right-4 bottom-4 drop-shadow-lg drop fas text-neutral-200 w-8 h-8 fa-sync-alt"
+            ></span>
+          </div>
+        </div>
+        <div>
+          <p class="mb-6">
+            Aber das ist nicht alles, was mit dieser recht neuen Technologie
+            gemacht werden kann. Auch in Videos und Bildern von z.B. berühmten
+            Person können Gesichter und Stimmen ausgetauscht werden. Wodurch
+            vollkommen andere Nachrichten vermittelt werden können.
+          </p>
+          <img src="/deepfake-1.png" class="w-full rounded-xl" />
+        </div>
+        <p>
+          Wenn du dir also nicht sicher bist, ob denn ein bestimmtes Youtube
+          Video echt ist, dann kann man den Link zu diesem Video bei einer
+          speziellen Suchmaschine von Amnesty International eingeben.
+        </p>
+        <a href="https://citizenevidence.amnestyusa.org" class="text-center">
+          https://citizenevidence.amnestyusa.org
+        </a>
+        <p>
+          Sie funktioniert ähnlich wie eine umgekehrte Bildersuche und findet
+          ähnliche Videos, die in einem anderen Zusammenhang stehen oder anders
+          geschnitten wurden.
+        </p>
+        <p>
+          <a
+            href="https://www.dw.com/de/wie-erkenne-ich-einen-deepfake/g-60197720"
+            >Hier</a
+          > gibt es ausserdem noch ein paar allgemeine Tips wie man Deepfakes aufdecken
+          kann, denn noch sind sie nicht perfekt . . .
+        </p>
+      </Section>
+      <Section>
+        <h4>Ist der Creator des Videos verifiziert?</h4>
         <MessageBox>
-          Eine Verifizierung bedeutet nur das das Video von einer echten
+          Eine Verifizierung bedeutet nur, dass das Video von einer echten
           Person/Organisation erstellt wurde, welche einen aktiven Kanal mit
           über 100.000 Abonnenten betreibt.
-          <strong
-            >Dadurch weiß man nicht ob man einem Kanal vertrauen sollte oder
-            nicht.</strong
-          >
-          <a
-            href="https://support.google.com/youtube/thread/14793658/%F0%9F%9A%A9-coming-soon-new-design-and-criteria-for-channel-verification-on-youtube?hl=en"
-            target="_blank"
-          >
-            Quelle
-          </a>
+          <strong>
+            Dadurch weiß man nicht, ob man einem Kanal vertrauen sollte oder
+            nicht.
+          </strong>
         </MessageBox>
-      </Section>
-    </SectionGroup>
-    <SectionGroup width="content">
-      <h2 class="Heading">Der Youtube Dislike Button</h2>
-      <Section>
-        Am 08. December hat Youtube den Dislike Button in allen Apps und
-        Websiten deaktiviert, fugit doloremque dolore in nobis nihil enim
-        explicabo ad quo perferendis omnis ipsam neque? Minima similique sit
-        sapiente aliquid aliquam.
-      </Section>
-
-      <h3 class="Heading">Return YouTube Dislike</h3>
-      <Section>
-        <Fragment>
-          <p>
-            Et quisquam cum ullam fugit doloremque dolore in nobis nihil enim
-            explicabo ad quo perferendis omnis ipsam neque? Minima similique sit
-            sapiente aliquid aliquam.
-          </p>
-          <span>
-            Website:
-            <a href="https://returnyoutubedislike.com">
-              https://returnyoutubedislike.com
-            </a>
-          </span>
-          <span>
-            GitHub:
-            <a href="https://github.com/Anarios/return-youtube-dislike">
-              https://github.com/Anarios/return-youtube-dislike
-            </a>
-          </span>
-        </Fragment>
-      </Section>
-      <h3 class="Heading">Youtube Vanced</h3>
-      <Section>
-        <p>
-          Youtube Vanced ist eine OpenSource Youtube Smartphone App welche unter
-          anderem bereits keine Werbung zeigt. Sie plant Return YouTube Dislike
-          einzubauen sodass eos reiciendis, temporibus voluptates obcaecati
-          aperiam, et quisquam cum ullam fugit.
-        </p>
-        <span>
-          Website: <a href="https://vancedapp.com">https://vancedapp.com</a>
-        </span>
-        <span>
-          GitHub: <a href="https://github.com/YTVanced">
-            https://github.com/YTVanced
-          </a>
-        </span>
       </Section>
     </SectionGroup>
   </PageBody>

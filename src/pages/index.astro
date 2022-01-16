@@ -6,6 +6,7 @@ import SectionGroup from '../components/SectionGroup.astro';
 import MessageBox from '../components/MessageBox.astro';
 import PageBanner from '../components/PageBanner.astro';
 import PageBody from '../components/PageBody.astro';
+import NavBar from '../components/NavBar.astro';
 import Footer from '../components/Footer.astro';
 
 const title = 'Fake News';
@@ -21,53 +22,54 @@ const colors = {
     {title}<br />
     Wem glaubst du?
   </PageBanner>
+  <NavBar />
   <PageBody>
     <SectionGroup width="content">
-      <Section>
-        <p slot="default">
-          Du hast gerade eben eine von einem Freund eine Nachricht darüber
-          bekommen das Olaf Scholz eigentlich gar keine Glatze hat, sondern sich
-          diese <strong>extra rasiert.</strong>
-        </p>
+    <h2 class="Heading">Fake News was ist das?</h2>
+    <Section>
+        <div class="md:flex">
+          <img src="/scholz.jpg" alt="" class="md:shrink-0 h-60 md:w-1/3 object-left-top rounded-lg"/>
+          <p class="md:ml-6 my-auto">
+            Du hast gerade eben eine Nachricht von einem Freund darüber
+            bekommen das Olaf Scholz eigentlich gar keine Glatze hat, sondern sich
+            diese <strong>extra rasiert!</strong>
+          </p>
+        </div>
         <MessageBox level="info" slot="default">
           Bevor du das auch noch an deine Freundin weiterleitest, sollest du dir
           erst einmal die Frage stellen ob denn bei dieser Nachricht auch alles
           stimmt.
         </MessageBox>
-      </Section>
-      <Section>
         <p>
-          Diese Art von 'politischem' Informationsaustausch ist vor allem bei
-          jüngeren Generationen die Norm.
+          Diese Art von politischem Informationsaustausch ist immer normaler
+          geworden, vor allem Jugendlichen und jungen Erwachsenen.
         </p>
         <p>
           Trotzdem informieren sich laut einer Vodafon Stiftung Studie aus dem
-          Jahr 2019 fast 75% der 14 bis 24 Jährigen mindestens Wöchentlich über
-          die aktuelle Politik. Die übrigbleibenden 25%, welche hauptsächlich
-          aus Personen mit wenig Interesse für Politik und niedrigem
-          Bildungshintergrund bestehen, fühlen sich oft mit der Überprüfung
-          dieser Fakten unsicher. <a
-            href="https://www.vodafone-stiftung.de/alles-auf-dem-schirm/"
-            target="_blank"
-          >
-            Quelle</a
-          ><br />
+          Jahr 2019 fast 75% der 14 bis 24 Jährigen mindestens wöchentlich über
+          die aktuelle Politik.
         </p>
         <p>
-          Wenn man also nicht aufpasst verbreitet man am Ende selbst
-          Falschinformationen, genannt <mark>Fake News.</mark>
+          Die übrig bleibenden 25%, welche hauptsächlich aus Personen mit wenig
+          Interesse für Politik und niedrigem Bildungshintergrund bestehen,
+          fühlen sich oft mit der Überprüfung dieser Fakten unsicher.
+        </p>
+        <p>
+          Aber auch jeder andere kann auf eine gezielte Falschnachricht (
+          <mark>Fake News</mark>) hereinfallen, denn wenn man diese nicht früh
+          genug erkennt, verbreitet man am Ende selbst weiter.
         </p>
       </Section>
     </SectionGroup>
     <SectionGroup width="content">
-      <h2 class="Heading">Wie kann man Fake News herausfiltern?</h2>
+      <h2 class="Heading">Wie kann man Fake News erkennen?</h2>
       <Section>
         <span>
           <a href="/youtube">Tips für Youtube</a>
         </span>
-        <span>
+        <!-- <span>
           <a href="/messenger">Tips für Messegers und Chats</a>
-        </span>
+        </span> -->
       </Section>
     </SectionGroup>
   </PageBody>
